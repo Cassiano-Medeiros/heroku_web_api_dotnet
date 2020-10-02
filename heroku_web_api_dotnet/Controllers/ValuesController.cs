@@ -10,36 +10,10 @@ namespace heroku_web_api_dotnet.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult Get()
         {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return Content("{\"cabecalho\":{\"instituicao\":\"JEP - Jurisdicción Especial para la Paz\",\"emissao\":\"Emitido em: 31/10/2019 09:04:04\",\"titulo\":\"Informe del Consumo de Archivos por la Relatoría de la JEP\",\"pagina\":\"Página\",\"vara\":\"Órgano judicial\",\"foro\":\"Complejo judicial\",\"juiz\":\"Nombre del magistrado\",\"nome_documento\":\"Nombre del archivo\",\"data\":\"Fecha y hora del consumo\",\"parametros\":\"Parâmetros do relatório\",\"consumido\":\"consumido\",\"ordem\":\"Orden\",\"filtros\": [{\"rotulo\": \"Órgano judicial\",\"descricao\": \"Sala de Amnistía o Indulto\"},{\"rotulo\": \"Magistrado\",\"descricao\": \"Jerónimo González\"},{\"rotulo\": \"Fecha inicial y final de consumo\",\"descricao\": \"01/01/2020 à 20/01/2020\"},{\"rotulo\": \"Situación\",\"descricao\": \"Todos\"}]},\"metadados\":[{\"nome_documento\":\"Archivo 1\",\"foro\":\"Jurisdicción Especial para La Paz\",\"vara\":\"Sala de Amnistía o Indulto\",\"juiz\":\"Jerónimo González\",\"data\":\"30/09/2020 3:00 AM\"}]}", "application/json");
         }
     }
 }
